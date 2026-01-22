@@ -94,6 +94,7 @@ def delete_student(request, student_id):
     if request.method == "DELETE":
         student = Student.objects.get(id=student_id)
         student.delete()
+        print("another print to test git branch")
         """
         delete from students where id = student_id
         """
