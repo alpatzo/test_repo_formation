@@ -112,7 +112,7 @@ def update_student(request,pk):
     if request.method == "PUT":
         student = Student.objects.get(id = pk)
         data = json.loads(request.body)
-        
+        print("test git status")
         if 'first_name' in data:
             student.first_name = data['first_name']
         if 'last_name' in data:
