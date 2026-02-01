@@ -4,7 +4,7 @@ from django.db import models
 class Student(models.Model):
     first_name = models.CharField(max_length=50, null=True, blank=True) # ==> te9bel null w te9bel ''
     last_name = models.CharField(max_length=50) # ==> not null 
-    email = models.EmailField(unique=True)  # !!!! @ integrate into email <==> str
+    email = models.EmailField()  # !!!! @ integrate into email <==> str
     age = models.PositiveIntegerField() # default validator age > 0 datatype ==> int 
     is_active = models.BooleanField(default=True) # boolean ==> True or False 
     created_at = models.DateTimeField(auto_now_add=True) # DateTimeField ==> date + time | DateField ==> only date | TimeField ==> only time
